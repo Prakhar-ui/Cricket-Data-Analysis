@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"folderPath": "raw-input",
 				"fileSystem": "raw-cricket-data"
 			}
 		}
