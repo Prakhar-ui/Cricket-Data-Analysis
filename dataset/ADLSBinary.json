@@ -1,5 +1,5 @@
 {
-	"name": "Binary1",
+	"name": "ADLSBinary",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
