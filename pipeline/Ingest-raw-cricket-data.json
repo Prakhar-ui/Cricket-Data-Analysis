@@ -46,7 +46,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ZipCricketSheet",
+						"referenceName": "HttpZipBinary",
 						"type": "DatasetReference"
 					}
 				],

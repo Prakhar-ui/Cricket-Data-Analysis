@@ -1,5 +1,5 @@
 {
-	"name": "ZipCricketSheet",
+	"name": "HttpZipBinary",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "HttpCricketSheet",
