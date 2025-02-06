@@ -1,0 +1,9 @@
+{
+	"name": "cricket-data-analysis-factory",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "513f77c7-bf60-48e9-919e-6812bb7ce89d",
+		"tenantId": "cef470c9-7dd3-43eb-8721-c1c580f75ea5"
+	}
+}
