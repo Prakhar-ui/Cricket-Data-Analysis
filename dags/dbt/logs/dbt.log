@@ -1,0 +1,72 @@
+[0m15:36:17.295978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D33A6D3BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D33A985F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D33A985750>]}
+
+
+============================== 15:36:17.300222 | 37c07d9c-14d0-4d21-a0a1-49aef3f0c707 ==============================
+[0m15:36:17.300222 [info ] [MainThread]: Running with dbt=1.8.1
+[0m15:36:17.301250 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\prakh\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init cricket_data_analysis', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:36:17.355243 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/prakh/.dbt')}
+[0m15:36:17.356259 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:36:17.359402 [debug] [MainThread]: Starter project path: C:\Users\prakh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m15:36:17.422453 [info ] [MainThread]: 
+Your new dbt project "cricket_data_analysis" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:36:17.424597 [info ] [MainThread]: Setting up your profile.
+[0m15:36:24.079841 [info ] [MainThread]: Profile cricket_data_analysis written to C:\Users\prakh\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m15:36:24.081348 [debug] [MainThread]: Command `dbt init` succeeded at 15:36:24.081348 after 6.84 seconds
+[0m15:36:24.082357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3344F5390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D334737210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D334736650>]}
+[0m15:36:24.083357 [debug] [MainThread]: Flushing usage events
+[0m15:45:57.246098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D524E3A450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D524E051D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D524E4C710>]}
+
+
+============================== 15:45:57.249603 | 95cd8886-7c1e-4bdd-ad78-0dfeccf48ed7 ==============================
+[0m15:45:57.249603 [info ] [MainThread]: Running with dbt=1.8.1
+[0m15:45:57.250608 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\prakh\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt deps', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:45:57.250608 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Coding\DE Projects\Cricket-Data-Analysis\dags\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:45:57.252608 [debug] [MainThread]: Command `dbt deps` failed at 15:45:57.252608 after 0.05 seconds
+[0m15:45:57.252608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D51E975390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D524E73150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D524E72ED0>]}
+[0m15:45:57.253608 [debug] [MainThread]: Flushing usage events
+[0m15:46:02.454410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D05D5C1050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D05D357890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D05D5E4790>]}
+
+
+============================== 15:46:02.457416 | 8c80fdb7-dc48-4393-98b3-11d63a27e829 ==============================
+[0m15:46:02.457416 [info ] [MainThread]: Running with dbt=1.8.1
+[0m15:46:02.457416 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\prakh\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:46:02.458416 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Coding\DE Projects\Cricket-Data-Analysis\dags\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:46:02.459872 [debug] [MainThread]: Command `dbt run` failed at 15:46:02.459872 after 0.06 seconds
+[0m15:46:02.459872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D05D357450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D0571C5390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D05D5C0A90>]}
+[0m15:46:02.459872 [debug] [MainThread]: Flushing usage events
+[0m15:46:33.666596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7ED2E3910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7ED2E2D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7ED077550>]}
+
+
+============================== 15:46:33.670760 | d1fec405-22c9-47b4-8ab4-01897196c176 ==============================
+[0m15:46:33.670760 [info ] [MainThread]: Running with dbt=1.8.1
+[0m15:46:33.671767 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\prakh\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m15:46:33.671767 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Coding\DE Projects\Cricket-Data-Analysis\dags\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:46:33.673088 [debug] [MainThread]: Command `dbt run` failed at 15:46:33.673088 after 0.06 seconds
+[0m15:46:33.673088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7ED294710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7E6E05390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7ED2E3810>]}
+[0m15:46:33.674096 [debug] [MainThread]: Flushing usage events
