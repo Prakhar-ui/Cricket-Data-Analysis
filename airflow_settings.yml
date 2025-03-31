@@ -1,0 +1,11 @@
+airflow:
+  connections:
+    - conn_id: fs_default
+      conn_type: File (path) 
+      conn_host:
+      conn_schema:
+      conn_login:
+      conn_password:
+      conn_port:
+      conn_extra:
+        path: /usr/local/airflow/include

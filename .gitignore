@@ -11,3 +11,5 @@ airflow.cfg
 airflow.db
 /logs
 /dags/dbt/cricket_data_analysis/data
+*.log
+data
