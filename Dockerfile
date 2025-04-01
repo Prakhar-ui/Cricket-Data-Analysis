@@ -5,3 +5,5 @@ RUN python -m venv dbt_venv && \
     source dbt_venv/bin/activate && \
     pip install --no-cache-dir -r requirements.txt && \
     deactivate
+
+COPY profiles.yml /home/astro/.dbt/profiles.yml

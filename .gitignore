@@ -13,3 +13,4 @@ airflow.db
 /dags/dbt/cricket_data_analysis/data
 *.log
 data
+profiles.yml
