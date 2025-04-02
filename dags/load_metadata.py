@@ -4,7 +4,7 @@ import json
 import logging
 from airflow.decorators import dag, task
 from airflow.providers.postgres.hooks.postgres import PostgresHook
-from pendulum import datetime, from_timestamp
+from pendulum import datetime
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -28,7 +28,7 @@ def load_metadata():
     def check_postgres_connection():
         """Checks if the Postgres connection is valid, otherwise raises an exception."""
         try:
-            hook = PostgresHook(postgres_conn_id=conn_id)
+            hook = PostgresHook(postgres_conn_id=conn_id, database = "admin")
             conn = hook.get_conn()
             cursor = conn.cursor()
             cursor.execute("SELECT 1")
@@ -39,13 +39,13 @@ def load_metadata():
             raise Exception(f"Failed to connect to Postgres: {str(e)}")
 
     @task()
-    def create_table():
+    def create_database_artifacts_if_not_exists():
         """Creates the required table if it doesn't exist."""
-        hook = PostgresHook(postgres_conn_id=conn_id)
+        hook = PostgresHook(postgres_conn_id=conn_id, database = "admin")
         create_table_sql = """
-        CREATE SCHEMA IF NOT EXISTS METADATA;
-        DROP TABLE IF EXISTS METADATA.MATCH_LINEAGE;
-        CREATE TABLE IF NOT EXISTS METADATA.MATCH_LINEAGE (
+        CREATE SCHEMA IF NOT EXISTS AUDIT;
+        DROP TABLE IF EXISTS AUDIT.MATCH_LINEAGE;
+        CREATE TABLE IF NOT EXISTS AUDIT.MATCH_LINEAGE (
             id SERIAL PRIMARY KEY,
             filename VARCHAR,
             filedate DATE, 
@@ -59,7 +59,7 @@ def load_metadata():
         );
         """
         hook.run(create_table_sql)
-        logger.info("Table METADATA.MATCH_LINEAGE is ready.")
+        logger.info("Table ADMIN.AUDIT.MATCH_LINEAGE is ready.")
 
     @task()
     def extract_from_readme():
@@ -75,7 +75,6 @@ def load_metadata():
             
             # Extract data efficiently using list comprehension
             matching_lines = [line for line in lines if re.search(pattern, line)]
-            logger.info(f"{matching_lines}")
             
             extracted_list = []
             for line in matching_lines:
@@ -103,9 +102,9 @@ def load_metadata():
             return
 
         try:
-            hook = PostgresHook(postgres_conn_id=conn_id)
+            hook = PostgresHook(postgres_conn_id=conn_id, database = "admin")
             hook.insert_rows(
-                "METADATA.MATCH_LINEAGE",
+                "AUDIT.MATCH_LINEAGE",
                 batch,
                 target_fields=[
                     "filedate",
@@ -125,7 +124,7 @@ def load_metadata():
             logger.error(f"Error inserting data into PostgreSQL: {e}")
 
     # Task dependencies
-    check_postgres_connection() >> create_table() >> load_into_postgres(extract_from_readme())
+    check_postgres_connection() >> create_database_artifacts_if_not_exists() >> load_into_postgres(extract_from_readme())
 
 # Instantiate the DAG
 load_metadata()
