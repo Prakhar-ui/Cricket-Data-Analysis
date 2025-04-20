@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: landing_zone
+    schema: ipl
+    tables:
+      - name: all_match_data
+        description: "Raw IPL match data"
